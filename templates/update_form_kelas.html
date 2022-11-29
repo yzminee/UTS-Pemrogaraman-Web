@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<!-- CSS only -->">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="row g-3" method="post" action="{{url_for('kelas_bp.update_kelas', id_kelas=data[0][0])}}">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">kelas</label>
+                <input type="text" class="form-control" id="inputEmail4" value="{{data[0][1]}}" name="kelas">
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">nip guru</label>
+                <select id="inputState" class="form-select" name="nip">
+                    <option selected value="{{data[0][2]}}">{{nip[0][2]}}</option>
+                    <hr>
+                    {%for nip in nip%}
+                        <option value="{{nip[0]}}">{{nip[0]}}</option>
+                    {%endfor%}
+                </select>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

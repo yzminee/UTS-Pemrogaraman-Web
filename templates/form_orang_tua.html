@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<!-- CSS only -->">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="row g-3" method="post" action="{{url_for('orang_tua_bp.create_orang_tua')}}">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="inputEmail4" name="nama">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">alamat</label>
+                <input type="text" class="form-control" id="inputPassword4" name="alamat">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">telp</label>
+                <input type="text" class="form-control" id="inputAddress" name="telp">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">pekerjaan</label>
+                <input type="text" class="form-control" id="inputAddress2" name="pekerjaan">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">agama</label>
+                <input type="text" class="form-control" id="inputCity" name="agama">
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">status</label>
+                <input type="text" class="form-control" id="inputZip" name="status">
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    
+</body>
+
+</html>
