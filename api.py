@@ -12,7 +12,7 @@ def api_guru():
     result['results'] = []
     try:
         cur = db.cursor()
-        sqlstr = "SELECT guru.nip, guru.nama, guru.alamat, guru.tmp_lahir, guru.tgl_lahir, guru.gender,guru.agama, guru.telp, guru.pendidikan, mapel.mapel FROM guru INNER JOIN relasi_mapel_guru ON relasi_mapel_guru.nip=guru.nip INNER JOIN mapel on mapel.id_mapel=relasi_mapel_guru.id_mapel"
+        sqlstr = "SELECT guru.id_guru, guru.nip, guru.nama, guru.alamat, guru.tmp_lahir, guru.tgl_lahir, guru.gender,guru.agama, guru.telp, guru.pendidikan, mapel.mapel FROM guru INNER JOIN relasi_mapel_guru ON relasi_mapel_guru.nip=guru.nip INNER JOIN mapel on mapel.id_mapel=relasi_mapel_guru.id_mapel"
         cur.execute(sqlstr)
         print('sukses')
         output_json = cur.fetchall()
