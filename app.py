@@ -6,6 +6,7 @@ from siswa import siswa_bp
 from mapel import mapel_bp
 from mengajar import mengajar_bp
 from pengguna import pengguna_bp
+from api import api
 
 app = Flask(__name__)
 app.register_blueprint(orang_tua_bp)
@@ -15,6 +16,7 @@ app.register_blueprint(siswa_bp)
 app.register_blueprint(mapel_bp)
 app.register_blueprint(mengajar_bp)
 app.register_blueprint(pengguna_bp)
+app.register_blueprint(api)
 
 app.secret_key = 'utsmimin'
 
